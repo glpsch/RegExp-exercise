@@ -1,7 +1,5 @@
-# RegExp exercise: form validation. Validates name, telephone number, email, web address 
-# (in Russian)
+# RegExp exercise: form validation  
+### Validates name (in English or Russian), telephone number, email, web address
 
-#### Yandex.Praktikum sprint 10
 
-https://glpsch.github.io/RegExp.github.io/
-
+### [Open on GitHub Pages](https://glpsch.github.io/RegExp.github.io/)
