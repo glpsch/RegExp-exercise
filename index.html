@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Regular Expressions</title>
@@ -19,21 +19,20 @@
             <form class="form" name="register" action="http://httpbin.org/post" method="POST">
                 <h3>Registration form</h3>
                 <fieldset class="form__fieldset">
-                    <div class="form__field">
-                        <!-- <input class="form__input" type="text" name="name" pattern="^[А-Я][а-яё]*(-[А-Я][а-яё]*)?$" placeholder="Имя" minlength="2" maxlength="20" required /> -->
-                        <input class="form__input" type="text" name="name" pattern="^[А-Я][а-яё]*(-[А-Я][а-яё]*)?$" placeholder="Имя" minlength="2" maxlength="20" required />
+                    <div class="form__field">                        
+                        <input class="form__input" type="text" name="name" pattern="(^[А-Я][а-яё]*(-[А-Я][а-яё]*)?$)|(^[A-Z][a-z]*(-[A-Z][a-z]*)?$)" placeholder="Name / Имя" minlength="2" maxlength="20" required />
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="email" name="email" pattern="^(?:[\w-]+\.?)+@(?:[\w-]+\.?)+[\w-]\.[a-z]{2,}$" placeholder="E-Mail" required />
-                        <span class="form__error">e-mail example: students-yandex@yandex.ru</span>
+                        <span class="form__error">Example: my-mail@mail.com</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="tel" placeholder="Telephone number" pattern="^\+?\d\s?\(?\d{3}\)?\s?-?\d{3}\s?-?(?:\d{2}\s?-?)\d{2}$" minlength="11" maxlength="18"  required/>
-                        <span class="form__error">telephone example: +7 (900) 000-00-00</span>
+                        <input class="form__input" type="tel" name="tel" placeholder="Telephone number" pattern="^\+?\d{1,3}\s?\(?\d{3}\)?\s?-?\d{3}\s?-?(?:\d{2}\s?-?)\d{2}$" minlength="11" maxlength="20"  required/>
+                        <span class="form__error">Example: +7 (900) 000-00-00 or +79000000000</span>
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="url" name="url" pattern="^(?:(https:\/\/)|(http:\/\/))(?:((\d{1,3}\.){3}\d{1,3})|((?:www\.)?(?:\w+\.?)+\w+))(?::[1-9]\d{1,4})?(?:[a-zA-Z0-9]+\/?)*#?$" placeholder="Your website" required/>
-                        <span class="form__error">URL example: http://mysite.ru</span>
+                        <span class="form__error">Example: http://mysite.com</span>
                     </div>
                     <button class="form__button" type="submit">Submit</button>
                 </fieldset>
